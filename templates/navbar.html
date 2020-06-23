@@ -1,0 +1,23 @@
+<style>
+  .hello-msg{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
+</style>
+<nav class="navbar navbar-dark bg-dark" >
+<a class="navbar-brand" href="{% url 'rate_form' %}">Enppi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard </a>
+      </li>
+    </ul>
+
+  <span class="hello-msg">Welcome :{{request.user}}</span>
+  <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+  </div>
+</nav>

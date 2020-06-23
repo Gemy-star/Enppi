@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %} RATE FIVE {% endblock title %}
+
+{% block content %}
+ <div class="row">
+  <div class="col-8 mt-5">
+	<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Rated By</th>
+					<th>Rate For</th>
+				</tr>
+
+				{% for rate in rates %}
+					<tr>
+						<td><a class="btn btn-sm btn-info" href="{% url 'rate_detail' rate.pk %}">View</a></td>
+						<td>{{rate.name}}</td>
+						<td>{{rate.itstaff.name}}</td>
+					</tr>
+				{% endfor %}
+
+			</table>
+ </div>
+ </div>
+     <div class="col-8 mt-5">
+            {% if employees.has_other_pages %}
+  <ul class="pagination">
+    {% if employees.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page={{ employees.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+    {% endif %}
+    {% for i in employees.paginator.page_range %}
+      {% if employees.number == i %}
+        <li class="page-item active"><span class="page-link">{{ i }} <span  class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if employees.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ employees.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+    </div>
+{% endblock content %}
