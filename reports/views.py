@@ -37,7 +37,7 @@ def get_Details(request):
     rate_by_two = Rating.objects.filter(rating='2').count()
     rate_by_three = Rating.objects.filter(rating='3').count()
     rate_by_four = Rating.objects.filter(rating='4').count()
-    rate_by_five = Rating.objects.filter(rating='1').count()
+    rate_by_five = Rating.objects.filter(rating='5').count()
     context = {"total": total, "one": rate_by_one, "two": rate_by_two, "three": rate_by_three,
                "four": rate_by_four, "five": rate_by_five}
     return render(request, 'reports/main.html', context=context)

@@ -9,7 +9,7 @@
 			<form method="get">
             {% csrf_token %}
               {{ myfilter.form }}
-		    <button class="btn btn-success" type="submit">Search</button>
+		    <button class="btn btn-success" type="submit"><span class="fa fa-search"></span>Search</button>
 		  </form>
 
 		</div>
@@ -24,7 +24,7 @@
 
 				{% for rate in rates %}
 					<tr>
-						<td><a class="btn btn-sm btn-info" href="{% url 'rate_detail' rate.pk %}">View</a></td>
+						<td><a class="btn btn-sm btn-info" href="{% url 'rate_detail' rate.pk %}"><span class="fa fa-pencil-square-o"></span>View</a></td>
 						<td>{{rate.name}}</td>
 						<td>{{rate.itstaff.name}}</td>
 					</tr>

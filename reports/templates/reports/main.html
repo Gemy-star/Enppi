@@ -4,7 +4,7 @@
 {% block content %}
 {% include 'reports/status.html' %}
     <div class="col-md-12 mt-5">
-		<h5 class="h5">Reports :</h5>
+		<h5 class="h5">Reports <span class="fa fa-address-card "></span> </h5>
 		<hr>
 		<div class="card card-body">
 
@@ -19,12 +19,12 @@
 				</tr>
 
 					<tr>
-						<td><a class="btn btn-sm  btn-outline-info" href="{% url 'rate1_list' %}">View</a></td>
-                        <td><a class="btn btn-sm btn-outline-info" href="{% url 'rate2_list' %}">View</a></td>
-					    <td><a class="btn btn-sm btn-outline-info" href="{% url 'rate3_list' %}">View</a></td>
-                        <td><a class="btn btn-sm btn-outline-info" href="{% url 'rate4_list' %}">View</a></td>
-                        <td><a class="btn btn-sm btn-outline-info" href="{% url 'rate5_list' %}">View</a></td>
-                         <td><a class="btn btn-sm btn-outline-success" href="{% url 'search' %}">Search</a></td>
+						<td><a class="btn btn-sm  btn-outline-info" href="{% url 'rate1_list' %}"><span class="fa fa-eye"></span>View</a></td>
+                        <td><a class="btn btn-sm btn-outline-info" href="{% url 'rate2_list' %}"><span class="fa fa-eye"></span>View</a></td>
+					    <td><a class="btn btn-sm btn-outline-info" href="{% url 'rate3_list' %}"><span class="fa fa-eye"></span>View</a></td>
+                        <td><a class="btn btn-sm btn-outline-info" href="{% url 'rate4_list' %}"><span class="fa eye"></span>View</a></td>
+                        <td><a class="btn btn-sm btn-outline-info" href="{% url 'rate5_list' %}"><span class="fa fa-eye"></span>View</a></td>
+                         <td><a class="btn btn-sm btn-outline-success" href="{% url 'search' %}"><span class="fa fa-search"></span> Search</a></td>
                     </tr>
 
 			</table>

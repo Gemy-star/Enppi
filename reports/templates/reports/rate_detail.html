@@ -6,36 +6,36 @@
      <div class="row">
 	<div class="col-12 mt-5">
 		<div class="card card-body">
-            <h5 class="card-title"> Rate For {{ rate.itstaff.name }}</h5>
+            <h5 class="card-title"> Rate For <span class="fa fa-user"></span>{{ rate.itstaff.name }}</h5>
 			<hr>
-            <p class="card-text"> Deparment : IT</p>
-                        <p class="card-text"> Phone: {{ rate.itstaff.phone }}</p>
-                       <p>IT Staff ID : {{rate.itstaff.employee_number}}</p>
+            <p class="card-text"> <span class="fa fa-laptop"></span> Deparment : IT</p>
+                        <p class="card-text"> <span class="fa fa-phone"></span> {{ rate.itstaff.phone }}</p>
+                       <p><span class="fa fa-info"></span> {{rate.itstaff.employee_number}}</p>
 		</div>
 	</div>
   <div class="col-12 mt-5">
 		<div class="card card-body">
 			{% if rate.name %}
-            <h5>Rate By {{rate.name}} </h5>
+            <h5>Rate By <span class="fa fa-id-card-o"></span> {{rate.name}} </h5>
             {% endif %}
 			<hr>
 
 			 {% if rate.employee_number %}
-            <p> Employee ID : {{rate.employee_number}}</p>
+            <p> Employee ID : <span class="fa fa-user"></span> {{rate.employee_number}}</p>
             {% endif %}
                      {% if rate.rating %}
-               <p>Rating Degree : {{ rate.rating }}</p>
+               <p>Rating Degree : <span class="fa fa-check-square"></span> {{ rate.rating }}</p>
             {% endif %}
 		</div>
 	</div>
        <div class="col-12 mt-5">
 		<div class="card card-body">
-			<h5>Comment</h5>
+			<h5>Comment <span class="fa fa-comment"></span></h5>
 			<hr>
 			 {% if rate.comment %}
             <p class="card-text">  {{rate.comment}}</p>
             {% endif %}
-            <button class="btn btn-outline-info btn-sm btn-block"   onclick="window.history.back()"> &#8592; Back </button>
+             <button class="btn btn-outline-info btn-sm btn-block"   onclick="window.history.back()"> <span class="fa fa-backward"></span> Back </button>
 		</div>
 	</div>
 

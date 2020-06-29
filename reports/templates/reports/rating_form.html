@@ -8,9 +8,27 @@
    <center> <h4 class="display-4">Rate Us</h4> </center>
     <hr>
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" class="btn btn-primary" value="Submit">
+    {% for filed in form%}
+			   <div class="form-group">
+			   {{filed}}
+			   </div>
+			   {%endfor%}
+    <center> <input type="submit" class="btn btn-primary" value="Submit"> </center>
 </form>
 </div>
 </div>
+    <script>
+var form_fields = document.getElementsByTagName('input')
+		form_fields[1].placeholder='Enter your name';
+		form_fields[2].placeholder='Enter Your Employee Number';
+		form_fields[1].className='form-control';
+		form_fields[2].className='form-control';
+		var select =  document.getElementById("id_itstaff");
+		select.className = 'form-control';
+		var rate = document.getElementById("id_rating");
+		rate.className = 'form-control';
+		var comment = document.getElementById("id_comment");
+		comment.className = 'form-control';
+		comment.placeholder = 'Enter your Comment'
+	</script>
 {% endblock content %}
