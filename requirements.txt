@@ -24,7 +24,7 @@ marshmallow==3.6.0
 marshmallow-sqlalchemy==0.23.0
 mccabe==0.6.1
 Pillow==7.1.2
-pipenv==2018.11.26
+pipenv==2022.1.8
 psycopg2==2.8.5
 pycodestyle==2.5.0
 pylint==2.5.0
