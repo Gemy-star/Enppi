@@ -28,7 +28,7 @@ pipenv==2018.11.26
 psycopg2==2.8.5
 pycodestyle==2.5.0
 pylint==2.5.0
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pytz==2020.1
 reportlab==3.5.42
 six==1.15.0
